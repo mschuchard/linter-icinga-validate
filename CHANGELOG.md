@@ -2,7 +2,6 @@
 - get working with password config
 - use range from output
 - gripes about imports
-- write spec tests
 - travisci
 - jasmine+babel
 
