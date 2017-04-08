@@ -1,7 +1,7 @@
 ### Next (Roadmap)
 - Added support for capturing and displaying warnings.
+- Added support for displaying full column range of errors.
 - get working with sudo password config
-- use range from output
 - stop gripes about imports
 - travisci
 - jasmine+babel
