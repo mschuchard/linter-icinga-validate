@@ -7,7 +7,6 @@
 - jasmine+babel
 - linter 2 api
 - add warning jasmine test
-- get warning message cleaner and capture range
 
 ### 1.0.0
 - Initial version ready for wide usage.
