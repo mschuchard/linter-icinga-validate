@@ -22,7 +22,7 @@ matrix:
 
 # execute tests
 install:
-- add-apt-repository ppa:formorer/icinga && apt-get update
-- apt-get install icinga2-bin
+- sudo add-apt-repository ppa:formorer/icinga && sudo apt-get update
+- sudo apt-get install icinga2-bin
 before_script: icinga2 --version
 script: 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'

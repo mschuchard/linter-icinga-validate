@@ -1,9 +1,8 @@
 ### Next (Roadmap)
+- Switched to using Linter v2 API.
 - get working with sudo password config
 - stop gripes about imports
-- travisci
 - jasmine+babel
-- linter 2 api
 - add warning jasmine test
 
 ### 1.0.1
