@@ -1,5 +1,6 @@
 ### Next (Roadmap)
 - Switched to using Linter v2 API.
+- Removed `atom-package-deps` dependency and functionality.
 - get working with sudo password config
 - stop gripes about imports
 - jasmine+babel
