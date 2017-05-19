@@ -1,7 +1,7 @@
 {
   "name": "linter-icinga-validate",
   "main": "./lib/main.js",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Icinga lint via validate",
   "repository": "https://github.com/mschuchard/linter-icinga-validate",
   "license": "MIT",
