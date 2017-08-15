@@ -37,16 +37,14 @@ describe('The Icinga Validate provider for Linter', () => {
     it('verifies the first message', () => {
       waitsForPromise(() => {
         return lint(editor).then(messages => {
-          expect(messages[0].type).toBeDefined();
-          expect(messages[0].type).toEqual('Error');
-          expect(messages[0].text).toBeDefined();
-          expect(messages[0].text).toEqual("syntax error, unexpected T_IDENTIFIER, expecting ']'");
-          expect(messages[0].filePath).toBeDefined();
-          expect(messages[0].filePath).toMatch(/.+syntax\.conf$/);
-          expect(messages[0].range).toBeDefined();
-          expect(messages[0].range.length).toBeDefined();
-          expect(messages[0].range.length).toEqual(2);
-          expect(messages[0].range).toEqual([[3, 3], [3, 4]]);
+          expect(messages[0].severity).toBeDefined();
+          expect(messages[0].severity).toEqual('error');
+          expect(messages[0].excerpt).toBeDefined();
+          expect(messages[0].excerpt).toEqual("syntax error, unexpected T_IDENTIFIER, expecting ']'");
+          expect(messages[0].location.file).toBeDefined();
+          expect(messages[0].location.file).toMatch(/.+syntax\.conf$/);
+          expect(messages[0].location.position).toBeDefined();
+          expect(messages[0].location.position).toEqual([[7, 2], [7, 7]]);
         });
       });
     });
@@ -74,16 +72,14 @@ describe('The Icinga Validate provider for Linter', () => {
     it('verifies the first message', () => {
       waitsForPromise(() => {
         return lint(editor).then(messages => {
-          expect(messages[0].type).toBeDefined();
-          expect(messages[0].type).toEqual('Warning');
-          expect(messages[0].text).toBeDefined();
-          expect(messages[0].text).toEqual("Apply rule 'satellite-host' for type 'Dependency' does not match anywhere!']'");
-          expect(messages[0].filePath).toBeDefined();
-          expect(messages[0].filePath).toMatch(/.+warning\.conf$/);
-          expect(messages[0].range).toBeDefined();
-          expect(messages[0].range.length).toBeDefined();
-          expect(messages[0].range.length).toEqual(2);
-          expect(messages[0].range).toEqual([[3, 3], [3, 4]]);
+          expect(messages[0].severity).toBeDefined();
+          expect(messages[0].severity).toEqual('warning');
+          expect(messages[0].excerpt).toBeDefined();
+          expect(messages[0].excerpt).toEqual("Apply rule 'satellite-host' for type 'Dependency' does not match anywhere!");
+          expect(messages[0].location.file).toBeDefined();
+          expect(messages[0].location.file).toMatch(/.+warning\.conf$/);
+          expect(messages[0].location.position).toBeDefined();
+          expect(messages[0].location.position).toEqual([[1, 0], [1, 41]]);
         });
       });
     });
