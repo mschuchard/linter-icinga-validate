@@ -1,7 +1,6 @@
 ### Next (Roadmap)
+- Ignore import errors.
 - get working with sudo password config
-- stop gripes about imports
-- jasmine+babel
 
 ### 1.1.0
 - Switched to using Linter v2 API.
