@@ -85,6 +85,17 @@ describe('The Icinga Validate provider for Linter', () => {
     });
   });
 
+  it('ignores a file with an import issue', () => {
+    waitsForPromise(() => {
+      const goodFile = path.join(__dirname, 'fixtures', 'templates.conf');
+      return atom.workspace.open(goodFile).then(editor =>
+        lint(editor).then(messages => {
+          expect(messages.length).toEqual(0);
+        })
+      );
+    });
+  });
+
   it('finds nothing wrong with a valid file', () => {
     waitsForPromise(() => {
       const goodFile = path.join(__dirname, 'fixtures', 'clean.conf');
