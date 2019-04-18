@@ -10,5 +10,4 @@ The `icinga2-bin` package is required to be installed before using this. The `Li
 
 ### Usage
 - The Icinga 2 daemon requires elevated user privileges to execute even though the binary does not actually need them. They have plans to remedy this, but until then this linter requires `sudo` to execute the `icinga2` binary executable. Therefore, this linter is only compatible with \*nix systems.
-- The first supported method of using `sudo` with this linter is passwordless sudo (option enabled by default). This typically requires a valid sudoers entry similar to `username    ALL=NOPASSWD: /usr/sbin/icinga2`.
-- The second (eventually) supported method of using `sudo` with this linter is entering your password into the package config settings. This will be supported in a later release.
+- The only supported method of using `sudo` with this linter is passwordless sudo. This typically requires a valid sudoers entry similar to `username    ALL=NOPASSWD: /usr/sbin/icinga2`.

@@ -1,4 +1,4 @@
-### Next (Roadmap)
+### 1.1.1
 - Updated `atom-linter` dependency.
 - Ignore import errors.
 - Remove sudo password config option and code.
