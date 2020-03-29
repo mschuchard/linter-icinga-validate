@@ -1,10 +1,13 @@
 # setup environment
-dist: xenial
-sudo: true
+dist: bionic
 language: cpp
 
 notifications:
   email: false
+
+branches:
+  only:
+  - master
 
 git:
   depth: 5
