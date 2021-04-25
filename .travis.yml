@@ -1,5 +1,5 @@
 # setup environment
-dist: bionic
+dist: focal
 language: cpp
 
 notifications:
@@ -15,19 +15,15 @@ git:
 # setup tests
 env:
   global:
-    - APM_TEST_PACKAGES="language-icinga2"
-    - ATOM_LINT_WITH_BUNDLED_NODE="true"
+  - APM_TEST_PACKAGES="language-icinga2"
+  - ATOM_LINT_WITH_BUNDLED_NODE="true"
 
-matrix:
-  include:
-  - os: linux
-  - os: linux
-    env: ATOM_CHANNEL=beta
+os: linux
 
 # execute tests
 install:
-- sudo curl https://packages.icinga.com/icinga.key | apt-key add -
-- sudo deb http://packages.icinga.com/ubuntu icinga-bionic main
+- sudo curl https://packages.icinga.com/icinga.key | sudo apt-key add -
+- sudo deb http://packages.icinga.com/ubuntu icinga-focal main
 - sudo apt-get update
 - sudo apt-get install -y --allow-unauthenticated icinga2-bin
 before_script: icinga2 --version
