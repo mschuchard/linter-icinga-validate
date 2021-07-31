@@ -1,7 +1,7 @@
 ![Preview](https://raw.githubusercontent.com/mschuchard/linter-icinga-validate/master/linter_icinga_validate.png)
 
 ### Linter-Icinga-Validate
-[![Build Status](https://travis-ci.org/mschuchard/linter-icinga-validate.svg?branch=master)](https://travis-ci.org/mschuchard/linter-icinga-validate)
+[![Build Status](https://travis-ci.com/mschuchard/linter-icinga-validate.svg?branch=master)](https://travis-ci.com/mschuchard/linter-icinga-validate)
 
 `Linter-Icinga-Validate` aims to provide functional and robust `icinga2 daemon --validate` linting functionality within Atom.
 

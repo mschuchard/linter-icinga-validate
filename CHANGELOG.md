@@ -1,3 +1,6 @@
+### (Next)
+- Updates to Linter API usage.
+
 ### 1.1.1
 - Updated `atom-linter` dependency.
 - Ignore import errors.
