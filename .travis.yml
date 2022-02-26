@@ -23,8 +23,8 @@ os: linux
 # execute tests
 install:
 - sudo curl https://packages.icinga.com/icinga.key | sudo apt-key add -
-- sudo echo "deb https://packages.icinga.com/ubuntu icinga-focal main" > /etc/apt/sources.list.d/focal-icinga.list
+- sudo echo 'deb https://packages.icinga.com/ubuntu icinga-focal main' > /etc/apt/sources.list.d/focal-icinga.list
 - sudo apt-get update
 - sudo apt-get install -y --allow-unauthenticated icinga2-bin
 before_script: icinga2 --version
-script: 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
+script: 'curl -s https://raw.githubusercontent.com/mschuchard/vagrant-boxes-docker-images/master/atom-build-package.sh | sh'
