@@ -32,8 +32,6 @@ jobs:
       run: apm install && apm install ${PACKAGES} && apm clean
     - name: lint source and spec
       run: ./node_modules/.bin/eslint lib spec || true
-    - name: install some pre-requisite packages
-      run: sudo apt-get update && sudo apt-get -yq install curl xvfb libgbm-dev
     - name: install icinga2
       run: sudo curl https://packages.icinga.com/icinga.key | sudo apt-key add - && sudo echo 'deb https://packages.icinga.com/ubuntu icinga-focal main' > /etc/apt/sources.list.d/focal-icinga.list && sudo apt-get update && sudo apt-get install -y --allow-unauthenticated icinga2-bin
     - name: run tests
